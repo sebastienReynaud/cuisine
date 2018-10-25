@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>Les unites bizarres pour poulette</title>
+<body>
+
+<h2>Convertisseur d'unit&eacute;s bizarres pour patissi&egrave;re en herbe</h2>
+<p>Entre ta valeur en teaspoon et autres...</p>
+
+<table>
+<p>
+  <label>	Fluid ounce</label>
+  <input id="inputounce" type="number" placeholder="fl oz" oninput="FluidOunceConverter(this.value)" onchange="FluidOunceConverter(this.value)">
+</p>
+<p>Millilitres: <span id="outputMiliters"></span></p>
+
+
+
+<p>
+  <label>	Tea spoon</label>
+  <input id="inputTspoon" type="number" placeholder="t sp" oninput="TeaSpoonConverter(this.value)" onchange="TeaSpoonConverter(this.value)">
+</p>
+<p>Millilitres: <span id="outputMilitersfromTsp"></span></p>
+</table>
+
+<p>
+  <label>	Table spoon</label>
+  <input id="inputTbspoon" type="number" placeholder="tb sp" oninput="TableSpoonConverter(this.value)" onchange="TableSpoonConverter(this.value)">
+</p>
+<p>Millilitres: <span id="outputMilitersfromTbsp"></span></p>
+</table>
+
+
+<p>
+  <label>	Cup</label>
+  <input id="inputCup" type="number" placeholder="cp" oninput="CupConverter(this.value)" onchange="CupConverter(this.value)">
+</p>
+<p>Millilitres: <span id="outputMilitersfromCup"></span></p>
+</table>
+
+
+<script>
+function FluidOunceConverter(valNum) {
+  document.getElementById("outputMiliters").innerHTML=valNum*29.574;
+}
+</script>
+
+<script>
+function TeaSpoonConverter(valNum) {
+  document.getElementById("outputMilitersfromTsp").innerHTML=valNum*4.929;
+}
+</script>
+
+<script>
+function TableSpoonConverter(valNum) {
+  document.getElementById("outputMilitersfromTbsp").innerHTML=valNum*14.787;
+}
+</script>
+
+<script>
+function CupConverter(valNum) {
+  document.getElementById("outputMilitersfromCup").innerHTML=valNum*236.588;
+}
+</script>
+
+</body>
+</html>
